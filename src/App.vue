@@ -17,8 +17,7 @@
         <div class="columns">
           <div class="column">
             <h3 class="footertitle">
-              Inspiration
-              <span>Daily</span>
+              Inspiration<span>Daily</span>
             </h3>
             <a :href="this.sites[0]">Home</a>
             <a :href="this.sites[1]">Categories</a>
@@ -76,7 +75,7 @@ export default {
   mounted() {
     this.sites = this.getRoutesList(
       router.options.routes,
-      "http://localhost:8080/#"
+      "http://floorvanwieringen.com/InspirationDaily/#"
     );
   },
 };
@@ -101,15 +100,16 @@ export default {
   z-index: 3;
   background-color: white;
   width: 100%;
-  height: 13rem;
+  height: 30%;
   margin-top: -2%;
   padding-top: 0%;
-  display: block;
-  margin-left: auto;
-  margin-right: auto;
+  /* display: block; */
+  text-align: center;
 }
 
 #nav a {
+  float: center;
+  text-align: center;
   font-weight: bold;
   color: #2c3e50;
   text-decoration: none;
@@ -128,11 +128,14 @@ export default {
 }
 
 .menu {
-  margin: 30px;
+  position: relative;
+  text-align: center;
+  margin: 1.5em;
   color: rgb(181, 202, 212) !important;
   font-weight: bold;
-  font-size: 20px;
+  font-size: 12em;
   text-transform: uppercase;
+  width: 100%;
 
   /* border: 2px solid;
   border-radius: 30px;
@@ -143,13 +146,25 @@ export default {
 }
 
 .menu:hover {
-  background-color: rgb(204, 232, 233);
+  background-color: rgb(107, 213, 216);
   border: 2px solid;
   /* border-radius: 30px; */
   border-color: white;
   box-shadow: 2px 2px 2px 2px;
   padding: 10px;
   background-color: white;
+}
+
+@media screen and (max-width: 600px) {
+  .menu {
+    /* float: none;
+    width: 100%; */
+    /* display: block; */
+    width: 50%;
+    margin-left: 1rem;
+    margin-right: 1rem;
+  
+  }
 }
 
 h1 {
@@ -174,7 +189,7 @@ span {
 }
 
 footer {
-  background-color: #f1f3f8 !important;
+  /* background-color: #f1f3f8 !important; */
   color: #fff;
   height: 100px;
   width: 100%;

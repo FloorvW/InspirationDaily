@@ -1,7 +1,6 @@
 <template>
   <div class="container">
     <img :src="image" />
-    <!-- <p v-if="!Loaded">please wait while image is loading...</p> -->
     <button class="btn" @click="searchRandom">Search again</button>
   </div>
 </template>
@@ -33,7 +32,7 @@ export default {
 
 <style scoped>
 .container {
-  padding-top: 15rem;
+  padding-top: 20%;
   display: block;
   margin-left: auto;
   margin-right: auto;
@@ -44,5 +43,12 @@ export default {
   margin-left: auto;
   margin-right: auto;
   margin-top: 20px;
+}
+
+@media screen and (max-width: 1000px) {
+  img {
+    float: none;
+    width: 100%;
+  }
 }
 </style>

@@ -207,6 +207,20 @@ export default {
 .btn:active {
   color: #20289e !important;
 }
+@media screen and (max-width: 1000px) {
+  .btn {
+    float: none;
+    width: 100%;
+    font-size: 0.8rem;
+    /* width: 25%; */
+    padding-left: 1px;
+    padding-right: 1px;
+    margin-left: 0.5rem;
+    margin-right: 0.5rem;
+    margin-top: 11rem;
+  
+  }
+}
 
 .colorsearch {
   display: inline;
